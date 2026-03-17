@@ -254,9 +254,9 @@ export default function Index() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", fontSize: "0.85rem", textAlign: "left", maxWidth: 360, width: "100%" }}>
               <div>
-                <div style={{ color: "var(--doc-muted)", marginBottom: "0.2rem", fontSize: "0.72rem" }}>Выполнил(а):</div>
-                <div style={{ fontWeight: 600 }}>Ученик(ца) 10 класса</div>
-                <div style={{ color: "var(--doc-muted)", fontSize: "0.78rem" }}>[Фамилия И.О.]</div>
+                <div style={{ color: "var(--doc-muted)", marginBottom: "0.2rem", fontSize: "0.72rem" }}>Выполнил:</div>
+                <div style={{ fontWeight: 600 }}>Ученик 10 класса</div>
+                <div style={{ color: "var(--doc-muted)", fontSize: "0.78rem" }}>Кочкуров Д.С.</div>
               </div>
               <div>
                 <div style={{ color: "var(--doc-muted)", marginBottom: "0.2rem", fontSize: "0.72rem" }}>Руководитель:</div>
