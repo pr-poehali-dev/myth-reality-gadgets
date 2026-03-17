@@ -239,8 +239,9 @@ export default function Index() {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "240mm", textAlign: "center" }}>
             <div style={{ fontSize: "0.8rem", color: "var(--doc-muted)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
               Министерство просвещения Российской Федерации<br />
-              Муниципальное общеобразовательное учреждение<br />
-              Средняя общеобразовательная школа
+              Муниципальное автономное общеобразовательное учреждение<br />
+              «Гимназия имени Героя Советского Союза Ю.А. Гарнаева<br />
+              г. Балашова Саратовской области»
             </div>
             <div style={{ width: 56, height: 2, background: "var(--doc-accent)", margin: "0 auto 1.5rem" }} />
             <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--doc-muted)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "2rem" }}>
@@ -260,12 +261,12 @@ export default function Index() {
               </div>
               <div>
                 <div style={{ color: "var(--doc-muted)", marginBottom: "0.2rem", fontSize: "0.72rem" }}>Руководитель:</div>
-                <div style={{ fontWeight: 600 }}>[ФИО учителя]</div>
-                <div style={{ color: "var(--doc-muted)", fontSize: "0.78rem" }}>[Должность]</div>
+                <div style={{ fontWeight: 600 }}>Чеканов А.В.</div>
+                <div style={{ color: "var(--doc-muted)", fontSize: "0.78rem" }}>Учитель ОБЗР</div>
               </div>
             </div>
             <div style={{ marginTop: "3rem", fontSize: "0.85rem", color: "var(--doc-muted)" }}>
-              [Город] • 2026
+              Балашов • 2026
             </div>
           </div>
         </PageWrapper>
