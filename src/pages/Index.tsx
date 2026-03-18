@@ -236,37 +236,34 @@ export default function Index() {
 
         {/* PAGE 1 — ТИТУЛЬНЫЙ ЛИСТ */}
         <PageWrapper id="title" pageNum={1}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "240mm", textAlign: "center" }}>
-            <div style={{ fontSize: "0.8rem", color: "var(--doc-muted)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              Министерство просвещения Российской Федерации<br />
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "240mm", textAlign: "center" }}>
+            <div style={{ fontSize: "0.78rem", fontWeight: 700, lineHeight: 1.6, marginBottom: "2rem", textTransform: "uppercase" }}>
               Муниципальное автономное общеобразовательное учреждение<br />
-              «Гимназия имени Героя Советского Союза Ю.А. Гарнаева<br />
+              «Гимназия имени Героя Советского Союза Ю. А. Гарнаева<br />
               г. Балашова Саратовской области»
             </div>
-            <div style={{ width: 56, height: 2, background: "var(--doc-accent)", margin: "0 auto 1.5rem" }} />
-            <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--doc-muted)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "2rem" }}>
-              Индивидуальный проект
+            <div style={{ fontSize: "0.88rem", marginBottom: "2.5rem", lineHeight: 1.5 }}>
+              Всероссийская научно-практическая конференция<br />
+              «Юные лидеры образования» – 2026
             </div>
-            <div style={{ fontSize: "1.55rem", fontWeight: 700, color: "var(--doc-accent)", lineHeight: 1.3, maxWidth: 400, marginBottom: "0.75rem" }}>
+            <div style={{ fontSize: "1.1rem", fontWeight: 700, lineHeight: 1.4, maxWidth: 420, marginBottom: "1.2rem", textTransform: "uppercase" }}>
               МИФЫ И РЕАЛЬНОСТЬ О СОВРЕМЕННЫХ ГАДЖЕТАХ
             </div>
-            <div style={{ fontSize: "0.95rem", color: "var(--doc-accent2)", fontStyle: "italic", fontFamily: "'Merriweather', serif", marginBottom: "3rem" }}>
-              Смартфоны, наушники, ноутбуки и планшеты
+            <div style={{ fontSize: "0.88rem", marginBottom: "4rem" }}>
+              Секция: Исследования пространства социального взаимодействия
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", fontSize: "0.85rem", textAlign: "left", maxWidth: 360, width: "100%" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", width: "100%", maxWidth: 420, gap: "0.8rem", fontSize: "0.88rem", textAlign: "left" }}>
               <div>
-                <div style={{ color: "var(--doc-muted)", marginBottom: "0.2rem", fontSize: "0.72rem" }}>Выполнил:</div>
-                <div style={{ fontWeight: 600 }}>Ученик 10 класса</div>
-                <div style={{ color: "var(--doc-muted)", fontSize: "0.78rem" }}>Кочкуров Д.С.</div>
+                <div style={{ fontWeight: 700 }}>Автор работы:</div>
+                <div>Кочкуров Д.С., ученик 10 класса</div>
               </div>
               <div>
-                <div style={{ color: "var(--doc-muted)", marginBottom: "0.2rem", fontSize: "0.72rem" }}>Руководитель:</div>
-                <div style={{ fontWeight: 600 }}>Чеканов А.В.</div>
-                <div style={{ color: "var(--doc-muted)", fontSize: "0.78rem" }}>Учитель ОБЗР</div>
+                <div style={{ fontWeight: 700 }}>Руководитель проекта:</div>
+                <div>Чеканов А.В., учитель ОБЗР</div>
               </div>
             </div>
-            <div style={{ marginTop: "3rem", fontSize: "0.85rem", color: "var(--doc-muted)" }}>
-              Балашов • 2026
+            <div style={{ marginTop: "auto", paddingTop: "3rem", fontSize: "0.88rem" }}>
+              Балашов – 2026
             </div>
           </div>
         </PageWrapper>
