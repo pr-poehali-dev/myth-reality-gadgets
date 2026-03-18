@@ -100,15 +100,16 @@ function BarChart({ title, data }: { title: string; data: { label: string; value
   const max = Math.max(...data.map(d => d.value));
   return (
     <div style={{ marginBottom: "1rem" }}>
-      <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--doc-accent)", marginBottom: "0.6rem", lineHeight: 1.3 }}>{title}</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.35rem" }}>
+      <div style={{ fontSize: "0.78rem", fontWeight: 600, color: "var(--doc-accent)", marginBottom: "0.75rem", lineHeight: 1.4 }}>{title}</div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem" }}>
         {data.map((d, i) => (
-          <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-            <div style={{ width: "120px", fontSize: "0.72rem", textAlign: "right", color: "var(--doc-text)", flexShrink: 0, lineHeight: 1.3 }}>{d.label}</div>
-            <div style={{ flex: 1, background: "#e8edf6", borderRadius: "2px", height: "22px", position: "relative", overflow: "hidden" }}>
-              <div style={{ width: `${(d.value / max) * 100}%`, height: "100%", background: "linear-gradient(to right, #1b3a6b, #3a6bbf)", display: "flex", alignItems: "center", justifyContent: "flex-end", paddingRight: "0.4rem" }}>
-                <span style={{ fontSize: "0.7rem", color: "white", fontWeight: 700 }}>{d.value}{d.unit || "%"}</span>
+          <div key={i}>
+            <div style={{ fontSize: "0.7rem", color: "var(--doc-text)", lineHeight: 1.3, marginBottom: "0.2rem" }}>{d.label}</div>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+              <div style={{ flex: 1, background: "#e8edf6", borderRadius: "2px", height: "16px", position: "relative" }}>
+                <div style={{ width: `${(d.value / max) * 100}%`, height: "100%", background: "linear-gradient(to right, #1b3a6b, #3a6bbf)", borderRadius: "2px" }} />
               </div>
+              <span style={{ fontSize: "0.68rem", color: "var(--doc-text)", fontWeight: 700, flexShrink: 0, minWidth: "3rem", textAlign: "left" }}>{d.value}{d.unit || "%"}</span>
             </div>
           </div>
         ))}
