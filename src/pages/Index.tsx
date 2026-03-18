@@ -608,8 +608,70 @@ export default function Index() {
           </div>
         </PageWrapper>
 
-        {/* PAGE 12 — РЕКОМЕНДАЦИИ */}
-        <PageWrapper id="recommendations" pageNum={12}>
+        {/* PAGE 12 — ГРАФИКИ 2 */}
+        <PageWrapper id="charts2" pageNum={12}>
+          <SectionHeading2 num="4.2">Дополнительные диаграммы</SectionHeading2>
+          <div className="doc-body">
+            <p>Ниже представлены дополнительные данные, характеризующие динамику продаж гаджетов, время зарядки аккумуляторов, уровень шума наушников и распределение экранного времени по возрастным группам.</p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem", marginTop: "0.75rem" }}>
+            <div style={{ background: "#fafafa", border: "1px solid var(--doc-border)", padding: "0.9rem" }}>
+              <BarChart
+                title="Рис. 5. Продажи гаджетов в России (млн шт., 2023)"
+                data={[
+                  { label: "Смартфоны", value: 26.4, unit: " млн" },
+                  { label: "Ноутбуки", value: 7.1, unit: " млн" },
+                  { label: "Планшеты", value: 4.3, unit: " млн" },
+                  { label: "Наушники", value: 18.9, unit: " млн" },
+                  { label: "Умные часы", value: 3.2, unit: " млн" },
+                ]}
+              />
+              <div style={{ fontSize: "0.68rem", color: "var(--doc-muted)", textAlign: "center" }}>Источник: GfK Russia, 2024</div>
+            </div>
+            <div style={{ background: "#fafafa", border: "1px solid var(--doc-border)", padding: "0.9rem" }}>
+              <BarChart
+                title="Рис. 6. Максимальный уровень звука наушников (дБ)"
+                data={[
+                  { label: "Вкладыши", value: 110, unit: " дБ" },
+                  { label: "Накладные", value: 118, unit: " дБ" },
+                  { label: "TWS (ANC)", value: 105, unit: " дБ" },
+                  { label: "Студийные", value: 126, unit: " дБ" },
+                  { label: "Норма ВОЗ", value: 85, unit: " дБ" },
+                ]}
+              />
+              <div style={{ fontSize: "0.68rem", color: "var(--doc-muted)", textAlign: "center" }}>Источник: ВОЗ / Роспотребнадзор, 2023</div>
+            </div>
+            <div style={{ background: "#fafafa", border: "1px solid var(--doc-border)", padding: "0.9rem" }}>
+              <BarChart
+                title="Рис. 7. Экранное время по возрастным группам (ч/день)"
+                data={[
+                  { label: "10–14 лет", value: 5.2, unit: " ч" },
+                  { label: "15–17 лет", value: 7.1, unit: " ч" },
+                  { label: "18–24 года", value: 8.4, unit: " ч" },
+                  { label: "25–44 года", value: 6.9, unit: " ч" },
+                  { label: "45+ лет", value: 4.3, unit: " ч" },
+                ]}
+              />
+              <div style={{ fontSize: "0.68rem", color: "var(--doc-muted)", textAlign: "center" }}>Источник: Mediascope, 2024</div>
+            </div>
+            <div style={{ background: "#fafafa", border: "1px solid var(--doc-border)", padding: "0.9rem" }}>
+              <BarChart
+                title="Рис. 8. Время зарядки 0→100% (мин) при разной мощности"
+                data={[
+                  { label: "5 Вт", value: 180, unit: " мин" },
+                  { label: "15 Вт", value: 95, unit: " мин" },
+                  { label: "33 Вт", value: 62, unit: " мин" },
+                  { label: "65 Вт", value: 41, unit: " мин" },
+                  { label: "120 Вт", value: 23, unit: " мин" },
+                ]}
+              />
+              <div style={{ fontSize: "0.68rem", color: "var(--doc-muted)", textAlign: "center" }}>Источник: GSMArena тесты, 2024</div>
+            </div>
+          </div>
+        </PageWrapper>
+
+        {/* PAGE 13 — РЕКОМЕНДАЦИИ */}
+        <PageWrapper id="recommendations" pageNum={13}>
           <SectionHeading1 num="5">Практические рекомендации по безопасному использованию гаджетов</SectionHeading1>
           <div className="doc-body">
             <p>На основе проведённого анализа мифов и научных данных сформированы практические рекомендации. Рекомендации разработаны с учётом предписаний ВОЗ и требований ГОСТ Р 51318.</p>
