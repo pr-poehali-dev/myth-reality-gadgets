@@ -34,7 +34,7 @@ function PageWrapper({ id, pageNum, children }: { id: string; pageNum: number; c
       width: "210mm",
       minHeight: "297mm",
       margin: "0 auto 32px auto",
-      padding: "20mm 25mm 15mm 30mm",
+      padding: "20mm 10mm 20mm 25mm",
       display: "flex",
       flexDirection: "column",
       boxSizing: "border-box",
@@ -99,21 +99,21 @@ function StatCard({ number, label, sub }: { number: string; label: string; sub?:
 function BarChart({ title, data }: { title: string; data: { label: string; value: number; unit?: string }[] }) {
   const max = Math.max(...data.map(d => d.value));
   return (
-    <div style={{ marginBottom: "1rem" }}>
-      <div style={{ fontSize: "0.78rem", fontWeight: 600, color: "var(--doc-accent)", marginBottom: "0.75rem", lineHeight: 1.4 }}>{title}</div>
+    <div style={{ marginBottom: "1.25rem" }}>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem" }}>
         {data.map((d, i) => (
           <div key={i}>
-            <div style={{ fontSize: "0.7rem", color: "var(--doc-text)", lineHeight: 1.3, marginBottom: "0.2rem" }}>{d.label}</div>
+            <div style={{ fontSize: "0.82rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", lineHeight: 1.4, marginBottom: "0.2rem" }}>{d.label}</div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
               <div style={{ flex: 1, background: "#e8edf6", borderRadius: "2px", height: "16px", position: "relative" }}>
                 <div style={{ width: `${(d.value / max) * 100}%`, height: "100%", background: "linear-gradient(to right, #1b3a6b, #3a6bbf)", borderRadius: "2px" }} />
               </div>
-              <span style={{ fontSize: "0.68rem", color: "var(--doc-text)", fontWeight: 700, flexShrink: 0, minWidth: "3rem", textAlign: "left" }}>{d.value}{d.unit || "%"}</span>
+              <span style={{ fontSize: "0.8rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", fontWeight: 700, flexShrink: 0, minWidth: "3rem", textAlign: "left" }}>{d.value}{d.unit || "%"}</span>
             </div>
           </div>
         ))}
       </div>
+      <div style={{ fontSize: "1rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "center", marginTop: "0.6rem", lineHeight: 1.4 }}>{title}</div>
     </div>
   );
 }
@@ -395,7 +395,7 @@ export default function Index() {
           <div className="doc-body">
             <p>Смартфоны являются наиболее распространённым видом гаджетов и, соответственно, объектом наибольшего количества заблуждений. В таблице 1 представлены наиболее типичные мифы и соответствующие им факты.</p>
           </div>
-          <div style={{ fontSize: "0.78rem", color: "var(--doc-muted)", textAlign: "center", margin: "0.5rem 0 0.25rem" }}>Таблица 1 — Мифы и факты о смартфонах</div>
+          <div style={{ fontSize: "1.167rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "right", margin: "0.75rem 0 0.25rem" }}>Таблица 1 — Мифы и факты о смартфонах</div>
           <table className="doc-table">
             <thead>
               <tr><th style={{ width: "42%" }}>Миф</th><th style={{ width: "43%" }}>Реальность</th><th style={{ width: "15%" }}>Вердикт</th></tr>
@@ -419,7 +419,7 @@ export default function Index() {
           <div className="doc-body">
             <p>Тема воздействия наушников на слух особенно активно обсуждается среди молодёжи. Многие заблуждения связаны с непониманием физики звука и физиологии слуховой системы.</p>
           </div>
-          <div style={{ fontSize: "0.78rem", color: "var(--doc-muted)", textAlign: "center", margin: "0.5rem 0 0.25rem" }}>Таблица 2 — Мифы и факты о наушниках</div>
+          <div style={{ fontSize: "1.167rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "right", margin: "0.75rem 0 0.25rem" }}>Таблица 2 — Мифы и факты о наушниках</div>
           <table className="doc-table">
             <thead>
               <tr><th style={{ width: "42%" }}>Миф</th><th style={{ width: "43%" }}>Реальность</th><th style={{ width: "15%" }}>Вердикт</th></tr>
@@ -446,7 +446,7 @@ export default function Index() {
           <div className="doc-body">
             <p>Мифы о ноутбуках охватывают широкий спектр вопросов: от правил эксплуатации аккумулятора до воздействия на репродуктивную функцию.</p>
           </div>
-          <div style={{ fontSize: "0.78rem", color: "var(--doc-muted)", textAlign: "center", margin: "0.5rem 0 0.25rem" }}>Таблица 3 — Мифы и факты о ноутбуках</div>
+          <div style={{ fontSize: "1.167rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "right", margin: "0.75rem 0 0.25rem" }}>Таблица 3 — Мифы и факты о ноутбуках</div>
           <table className="doc-table">
             <thead>
               <tr><th style={{ width: "42%" }}>Миф</th><th style={{ width: "43%" }}>Реальность</th><th style={{ width: "15%" }}>Вердикт</th></tr>
@@ -460,7 +460,7 @@ export default function Index() {
           </table>
           <div id="myths-tablets" style={{ marginTop: "1.25rem" }} />
           <SectionHeading2 num="2.4">Мифы о планшетах</SectionHeading2>
-          <div style={{ fontSize: "0.78rem", color: "var(--doc-muted)", textAlign: "center", margin: "0.5rem 0 0.25rem" }}>Таблица 4 — Мифы и факты о планшетах</div>
+          <div style={{ fontSize: "1.167rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "right", margin: "0.75rem 0 0.25rem" }}>Таблица 4 — Мифы и факты о планшетах</div>
           <table className="doc-table">
             <thead>
               <tr><th style={{ width: "42%" }}>Миф</th><th style={{ width: "43%" }}>Реальность</th><th style={{ width: "15%" }}>Вердикт</th></tr>
@@ -488,7 +488,7 @@ export default function Index() {
           <div className="doc-body">
             <p>Гаджеты работают в диапазоне неионизирующего излучения — низкочастотного ЭМИ, которое <strong>не разрушает химические связи</strong> в биологических молекулах. Показатель SAR (удельная поглощаемая мощность) регламентирован ГОСТ Р 51318.27 — допустимый предел: 2 Вт/кг.</p>
           </div>
-          <div style={{ fontSize: "0.78rem", color: "var(--doc-muted)", textAlign: "center", margin: "0.5rem 0 0.25rem" }}>Таблица 5 — Уровень излучения гаджетов в сравнении с нормой</div>
+          <div style={{ fontSize: "1.167rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "right", margin: "0.75rem 0 0.25rem" }}>Таблица 5 — Уровень излучения гаджетов в сравнении с нормой</div>
           <table className="doc-table">
             <thead>
               <tr><th>Устройство</th><th>Тип излучения</th><th>Мощность</th><th>Норма</th><th>Статус</th></tr>
@@ -521,7 +521,7 @@ export default function Index() {
             <StatCard number="85%" label="Подростков используют смартфон ежедневно" sub="ФОМ, 2024" />
             <StatCard number="43%" label="Пользователей с симптомами CVS" sub="AAO, 2023" />
           </div>
-          <div style={{ fontSize: "0.78rem", color: "var(--doc-muted)", textAlign: "center", margin: "0.5rem 0 0.25rem" }}>Таблица 6 — Распределение времени использования гаджетов (Россия, 2024)</div>
+          <div style={{ fontSize: "1.167rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "right", margin: "0.75rem 0 0.25rem" }}>Таблица 6 — Распределение времени использования гаджетов (Россия, 2024)</div>
           <table className="doc-table">
             <thead>
               <tr><th>Тип гаджета</th><th>Ср. время/день</th><th>Основные цели</th><th>Доля пользователей</th></tr>
@@ -533,7 +533,7 @@ export default function Index() {
               <tr><td>Планшет</td><td>1,4 часа</td><td>Видео, чтение, игры</td><td>38%</td></tr>
             </tbody>
           </table>
-          <div style={{ marginTop: "1rem", fontSize: "0.78rem", color: "var(--doc-muted)", textAlign: "center", marginBottom: "0.25rem" }}>Распространённость мифов среди пользователей (опрос, n=500 чел., 2024)</div>
+          <div style={{ fontSize: "1.167rem", fontFamily: "'PT Astra Serif','PT Serif',serif", color: "var(--doc-text)", textAlign: "right", margin: "0.75rem 0 0.25rem" }}>Распространённость мифов среди пользователей (опрос, n=500 чел., 2024)</div>
           <table className="doc-table">
             <thead>
               <tr><th>Миф</th><th>Верят</th><th>Знают правду</th><th>Затрудняются</th></tr>
